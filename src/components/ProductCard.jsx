@@ -4,6 +4,7 @@ export default function ProductCard({ product }) {
       <div className="h-64 overflow-hidden rounded-2xl">
         <img
           src={product.img}
+          alt={product.name}
           className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
         />
       </div>
