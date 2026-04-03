@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";  // ← Add this
 import { ChevronDown, Menu, X, Search, ShoppingCart, User, Heart } from "lucide-react";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openItem, setOpenItem] = useState(null);
   const [cartCount] = useState(0);
@@ -40,6 +42,7 @@ export default function Navbar() {
 
   const handleMenuClick = (href) => {
     console.log("Navigating to:", href);
+     navigate(href);
     setMobileOpen(false);
   };
 
@@ -144,7 +147,7 @@ export default function Navbar() {
           </button>
 
           <button
-            onClick={() => handleMenuClick("/account")}
+            onClick={() => handleMenuClick("/login")}
             className="p-2.5 hover:bg-gradient-to-r from-blue-100/60 to-cyan-100/60 rounded-full backdrop-blur-sm transition-all duration-300 text-gray-700 hover:text-[#00a8e8] relative group border border-white/40"
             aria-label="Account"
             title="My Account"
@@ -240,7 +243,7 @@ export default function Navbar() {
           {/* Mobile bottom actions */}
           <div className="border-t border-gray-100/50 px-4 py-4 flex gap-3">
             <button
-              onClick={() => handleMenuClick("/account")}
+              onClick={() => handleMenuClick("/login")}
               className="flex-1 py-2 border-2 border-gray-200 rounded-xl hover:bg-blue-50/60 transition flex items-center justify-center gap-2 text-gray-700 font-semibold backdrop-blur-sm"
             >
               <User size={18} /> Account

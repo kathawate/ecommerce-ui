@@ -1,16 +1,11 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import ProductGrid from "./components/ProductGrid";
-import Footer from "./components/Footer";
+import { AuthProvider } from "./features/auth/context/AuthContext";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <ProductGrid />
-      <Footer />
-    </>
+    <AuthProvider>
+      <AppRoutes />
+    </AuthProvider>
   );
 }
 
