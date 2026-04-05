@@ -11,7 +11,7 @@ const AppRoutes = () => {
         {/* ✅ Public pages WITHOUT layout */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-
+ 
         {/* ✅ Pages WITH layout */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
