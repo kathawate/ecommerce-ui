@@ -6,7 +6,6 @@ import HomePage from "../pages/HomePage";
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
       <Routes>
 
         {/* ✅ Public pages WITHOUT layout */}
@@ -19,7 +18,6 @@ const AppRoutes = () => {
         </Route>
 
       </Routes>
-    </BrowserRouter>
   );
 };
 

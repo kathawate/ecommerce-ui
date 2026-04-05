@@ -1,11 +1,13 @@
 import { AuthProvider } from "./features/auth/context/AuthContext";
 import AppRoutes from "./routes/AppRoutes";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <AuthProvider>
-      <AppRoutes />
-    </AuthProvider>
+      <AuthProvider>  {/* ✅ Now hooks will work */}
+        <Toaster position="top-right" />
+        <AppRoutes />
+      </AuthProvider>
   );
 }
 
